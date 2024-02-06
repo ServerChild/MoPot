@@ -9,12 +9,14 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <link rel="stylesheet" href="${path}/resources/css/header.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 
 <nav class="navbar navbar-expand-sm navbar-light"  >
-  <a class="navbar-brand" href="index.jsp">모여라!!!</a> <!-- 홈페이지 메인 링크 걸기 -->
+  <a class="navbar-brand" href="<%= request.getContextPath() %>/">모여라!!!</a> <!-- 홈페이지 메인 링크 걸기 -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -31,15 +33,14 @@
   
     <!-- if문 넣어서 로그인 전/후 아이콘 변경 -->
     <c:choose>
-        <c:when test="${empty sessionScope.user}">
+        <c:when test="${ empty loginUser }">
             <!-- 사용자가 로그인하지 않은 경우 -->
             <ul class="userMul nav-item ">
                 <li class="userMli nav-item">
-                    <form action="login" method="post">
-                    <span class="material-symbols-outlined">
+                    <span class="material-symbols-outlined" href="#">
                         login
                     </span>
-                    </form>
+                    <!-- 로그인 창 안에 회원가입창으로 가는 링크 연결 -->
                 </li>
             </ul>
         </c:when>
@@ -50,7 +51,7 @@
                 <span class="material-symbols-outlined" href="#">
                     person
                 </span>
-                    <span class="material-symbols-outlined" href="#">
+                <span class="material-symbols-outlined" href="#">
                     logout
                 </span>
                 </li>

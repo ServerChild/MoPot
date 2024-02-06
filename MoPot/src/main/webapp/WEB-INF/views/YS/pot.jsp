@@ -6,38 +6,39 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-	<title>팟 구하기</title>
-	<style>
-		div {
-			border: 1px solid;
-			/* background-color: beige; */
-			border-radius: 16px;
-			/* box-shadow: inset 0 0 2px ; */
-		}
-		table {
-			width: 100%;
-			/* border: solid 1px; */
-		}
-		/* tr, td {
-			border: solid;
-		} */
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<title>팟 구하기</title>
+<style>
+	div {
+		border: 1px solid;
+		/* background-color: beige; */
+		border-radius: 16px;
+		/* box-shadow: inset 0 0 2px ; */
+	}
+	table {
+		width: 100%;
+		/* border: solid 1px; */
+	}
+	/* tr, td {
+		border: solid;
+	} */
 
-		/* 추가된 스타일: 프로그레스 바 크기 조절 */
-		progress {
-    	width: 90%; /* 여기서 크기를 조절하세요 */
-    }
-	</style>
+	/* 프로그레스 바 크기 조절 */
+	progress {
+	width: 90%; /* 크기 조절 */
+	}
+</style>
 </head>
 <body>
-	<br>
+
 	<!-- 헤더 코드 -->
 	<jsp:include page="/WEB-INF/views/common/header.jsp"></jsp:include>
 	<br>
 	<!-- 게시글 목록 구성
-
 			 유저 닉네임
 			 본문 내용, 모집 마감/진헹 정도(커서 올리면 모집 인원 확인 가능, progress 코드 사용), 신청 버튼
 			 해시태그 -->
@@ -48,12 +49,15 @@
 				<td></td>
 				<td>
 					프로필 사진, 유저 닉네임
+					<!-- 히든으로 해도 될 거 같음 아닌가.. 일단 글번호는 히든 -->
+					<!-- 작성일/수정일(수정일은 히든) -->
 				</td>
 
 			</tr>
 			<tr>
 				<td style="width: 2%;"></td>
 				<td style="width: 75%;">본문</td>
+				<!-- 모집 인원 관련 DB도 구성해야함 -->
 				<!-- 모집 인원, 신청 인원에 따른 프로그레스바 상태 변경 스크립트 필요 -->
 				<td style="width: 10%;">
 					<progress value="20" max="100" id="progress1"></progress>
@@ -66,13 +70,13 @@
 			</tr>
 			<tr>
 				<td></td>
-				<td>해시태그</td>
+				<td>태그</td>
 			</tr>
 		</table>
 	</div>
 
 	<!-- 푸터 코드 -->
-
+	<br><!-- br 사용하지 않고 마진으로 처리 해줘야 함 -->
 	<jsp:include page="/WEB-INF/views/common/footer.jsp"></jsp:include>
 
 	<script>
