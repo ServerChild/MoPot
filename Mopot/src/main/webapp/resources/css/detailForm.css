@@ -1,0 +1,317 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+
+/* 페이지 전체 적용 */
+.content-detail{
+	width : 800px;
+	margin : 0 auto;
+}
+/* 컨테이너 (전체 너비 800px) */
+.container{
+	width: 800px;
+	margin: 0 auto; 
+}
+/* Title : 상 세 보 기 */
+.content-detail-title{
+}
+/* 이전글, 다음글 버튼 */
+.content-detail-prevnext{
+	text-align: right;
+}
+
+
+/* 테이블 시작 */
+.content-detail-body{
+	border : 0px solid black;
+}
+	/* 속성 - 중앙, 회색 처리 */
+.conNo, .conCategory, .conTitle, .conWriter, .conCreate, .conModify, .conCount, .conDetail, .conTag{
+	background-color: #e3e3e3;
+	text-align: center;
+	width:25%
+}
+	/* 1-(1) 번호(No)+ 번호 입력칸 */
+.conNo{
+	width:100%;
+}
+#conNoInput{
+	width:100%;
+	border-width: 0;
+}
+	/* 1-(2) 분류(Category) + 분류 입력칸 */
+.conCategory{
+	width:100%;
+}
+#conCategoryInput{
+	width:100%;
+	-moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+  
+	font-family: "Noto Sansf KR", sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+  
+	color: #444;
+	background-color: #fff;
+  
+	padding: .6em 1.4em .5em .8em;
+	margin: 0;
+  
+	border: 1px solid #aaa;
+	border-radius: .5em;
+	box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+}
+
+#conCategoryInput:hover {
+  border-color: #888;
+}
+
+#conCategoryInput:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7);
+  box-shadow: 0 0 0 3px -moz-mac-focusring;
+  color: #222;
+  outline: none;
+}
+
+#conCategoryInput:disabled {
+  opacity: 0.5;
+}
+	/* 2 제목(Title) + 입력칸 */
+.conTitle{
+	/* width:100%; */
+}
+#conTitleInput{
+	width:99%;
+}
+	/* 3-(1) 작성자(Writer) + 입력칸 */
+.conWriter{
+	/* width:100%; */
+}
+#conWriterInput{
+	width:90%; 
+}
+	/* 3-(2) 조회수(Count) + 입력칸 */
+.conCount{
+	/* width:100%; */
+}	
+#conCountInput{
+	border-width : 0;
+	/* width:100%; */
+}
+	/* 4-(1) 작성일(Create) + 입력칸 (읽기만가능 readonly) */
+.conCreate{
+	/* width:100%; */
+}
+#conCreateInput{
+	/* width:100%; */
+	border-width : 0;
+}
+	/* 4-(2) 수정일(Modify) + 입력칸 (읽기만가능 readonly) */
+.conModify{
+	/* width:100%; */
+}
+#conModifyInput{
+	/* width:100%; */
+	border-width : 0;
+}	
+	/* 5 내용(Detail) + 입력칸 */
+.conDetail{
+	width:100%;
+}
+#conDetailInput{
+	width:100%;
+}
+	/* 6 태그(Tag) + 입력칸 */
+.conTag{
+	width:100%;
+}
+#conTagInput{
+	width:99%;
+}
+	/* 7 버튼 (수정, 목록, 글쓰기, 삭제) */
+#button{
+	position: relative;
+    margin: 0 auto;
+    max-width: 100%;  
+    text-align: center;
+}
+	/* 8 버튼 (작성자 게시글 더보기 ) */
+#conWriterMore{
+	text-align: right;
+}
+		/* 작성자 게시글 더보기 버튼 */
+.conWriterMore-btn{
+	background-color: #D4F4FA;
+    color :black;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+		/* 수정 */
+.modify-btn{
+	background-color: #4B4B4B;
+    color :white;
+    border-radius: 5px;
+    font-size: 14px;
+}
+		/* 목록 */
+.list-btn{
+	background-color: #4B4B4B;
+    color :white;
+    border-radius: 5px;
+    font-size: 14px;
+}
+		/* 글쓰기 */
+.write-btn{
+	background-color: #4B4B4B;
+    color :white;
+    border-radius: 5px;
+    font-size: 14px;
+}
+		/* 삭제 */
+.delete-btn{
+	background-color: #4B4B4B;
+    color :white;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* 좋아요 하트 버튼 */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+.heart-btn{
+  position: relative;
+  width: 120px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.content{
+  padding: 13px 16px;
+  display: flex;
+  border: 2px solid #eae2e1;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.content.heart-active{
+  border-color: #f9b9c4;
+  background: #fbd0d8;
+}
+.heart{
+  position: absolute;
+  background: url("../img/SHO/img.png") no-repeat;
+  background-position: left;
+  background-size: 2900%;
+  height: 90px;
+  width: 90px;
+  top: 50%;
+  left: 21%;
+  transform: translate(-50%,-50%);
+}
+.text{
+  font-size: 21px;
+  margin-left: 30px;
+  color: grey;
+  font-family: 'Montserrat',sans-serif;
+}
+.numb:before{
+  content: '1';
+  font-size: 21px;
+  margin-left: 7px;
+  font-weight: 600;
+  color: #9C9496;
+  font-family: sans-serif;
+}
+.numb.heart-active:before{
+  content: '2';
+  color: #000;
+}
+.text.heart-active{
+  color: #000;
+}
+.heart.heart-active{
+  animation: animate .8s steps(28) 1;
+  background-position: right;
+}
+@keyframes animate {
+  0%{
+    background-position: left;
+  }
+  100%{
+    background-position: right;
+  }
+}
+
+/* 댓글 부분  */
+
+	/* 댓글 작성 */
+.reply-write{
+	width : 100%;
+	border: 2px solid black;
+}
+.reply-head{
+	width : 800px;
+	margin : 0 auto;
+	border : 2px black;
+	text-align : "center";
+}
+.reply-content{
+	width : 85%;	
+}
+.reply-btn{
+	width: 10%;
+}
+	/* 댓글 리스트 출력 */
+.reply-box{
+	width : 100%;
+	border: 2px solid black;
+}
+.reply-list{
+}
+	/* 댓글 박스처리 */
+.reply-detail{
+	text-align: left;
+}
+.replyname{
+	text-align: center;
+	width : 15%;
+}
+.replydetail{
+	width : 80%;	
+}
+#reDeatil{
+	width:98%;
+	font-size: 16px;
+	
+}
+.reTime{
+	width:50%;
+	font-size: 12px;
+}
+.reply-box-button{
+	text-align: right;
+}
+/* 대댓글달기 */
+
+	/* 대댓글 입력창*/
+#reReDetail{
+	height : 4em;
+	width : 50em;
+}	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

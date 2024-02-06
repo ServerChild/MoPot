@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+/*body {*/
+/*	background-color: #8EC0E4;*/
+/*}*/
+
+.container {
+	margin-top:30px;
+	font-family: 'EASTARJET-Medium';
+}
+
+/* 본문 css */
+@font-face {
+	font-family: 'EASTARJET-Medium';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/EASTARJET-Medium.woff2') format('woff2');
+	font-weight: 500;
+	/*font-size: xx-larger;*/
+}
+
+
+#fontDiv{
+	font-family: 'EASTARJET-Medium';
+}
+
+.wrapper {
+height: 100vh;
+/*This part is important for centering*/
+display: grid;
+place-items: center;
+}
+
+.typing-demo {
+width: 23.4ch;
+animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+white-space: nowrap;
+overflow: hidden;
+border-right: 3px solid;
+font-family: 'EASTARJET-Medium';
+font-size: 2em;
+color: #000;
+}
+
+.typing-demo a {
+font-size: 100px;
+font-family: 'EASTARJET-Medium';
+text-decoration: none;
+color: #000;
+}
+
+@keyframes typing {
+from {
+	width: 0
+}
+}
+	
+@keyframes blink {
+50% {
+	border-color: transparent
+}
+}
