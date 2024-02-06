@@ -1,0 +1,65 @@
+/* Font */
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 전체 CSS */
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'GmarketSansMedium';
+}
+/* 각 테이블 명칭 */
+.con_list label {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.status_list label {
+    display: block;
+    text-align: center;
+    margin-top: 60px;
+}
+
+/* 테이블 전체 */
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 1rem auto;
+    background-color: white;
+}
+
+/* 테이블 행 */
+td {
+    padding: 8px;
+    border-bottom: 1px solid #A0BAED;
+    text-align: center;
+}
+
+/* 테이블 열(목록명) */
+th {
+    padding: 8px;
+    text-align: center;
+    border-top: 2px solid #7C96C9;
+    border-bottom: 2px solid #7C96C9;
+    color: black;
+}
+
+/* 테이블 올렸을 때 hover */
+tbody tr:hover {
+    background-color: #FAFFFF;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+/* 테이블 왼, 오 외곽선 x */
+th, td {
+    border-left: none;
+    border-right: none;
+}
