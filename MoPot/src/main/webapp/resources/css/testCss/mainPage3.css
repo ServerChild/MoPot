@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: 'EASTARJET-Medium';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/EASTARJET-Medium.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+}
+
+#fontDiv{
+	font-family: 'EASTARJET-Medium';
+}
+
+.wrapper {
+  height: 100vh;
+  /*This part is important for centering*/
+  display: grid;
+  place-items: center;
+  font-family: 'EASTARJET-Medium';
+}
+
+.typing-demo {
+  width: 7ch;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+  font-family: 'EASTARJET-Medium';
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+/*   
+.fakeimg {
+  height: 200px;
+  background: #aaa;
+} 
+
+body {
+  font-family: 'EASTARJET-Medium';
+}
+*/
+
+.wrapper {
+	font-family: 'EASTARJET-Medium';
+  background-color: #8EC0E4;
+}

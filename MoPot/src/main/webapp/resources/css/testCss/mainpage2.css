@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: 'EASTARJET-Medium';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/EASTARJET-Medium.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Giants-Inline';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Giants-Inline.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.intro {
+	position: relative;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	background-color: #8EC0E4;
+}
+
+.intro__title {
+	font-size: 60px;
+	line-height: 1.166666666666667;
+	color: #FFF;
+	text-align: center;
+}
+
+.intro__title:after {
+	content: '|';
+	display: inline-block;
+	font-size: 70px;
+	animation: moveCursor 500ms infinite;
+}
+
+@keyframes moveCursor {
+	from {
+			opacity: 1;
+	}
+	
+	to {
+			opacity: 0;
+	}
+}
+
+.intro__button {
+	position: absolute;
+	left: 50%;
+	bottom: 8%;
+	transform: translate(-50%, 8%);
+	width: 37px;
+	height: 37px;
+	opacity: 0;
+	background-image: url('./../img/index/down-arrow.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	transition: opacity 500ms ease-in;
+}
+
+.intro__button:hover {
+	cursor: pointer;
+}
