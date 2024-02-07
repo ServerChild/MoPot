@@ -7,9 +7,12 @@
     <meta charset="UTF-8">
     <link href="${path}/resources/css/loginPage.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <title>Login</title>
+    <title>LOGIN</title>
 </head>
 <body>
+    <!-- Header -->
+    <jsp:include page="/WEB-INF/views/Common/header.jsp"></jsp:include>
+
 	<!-- 로그인 페이지 -->
     <form action="loginMember" method="post" class="loginForm">
         <h2>로그인</h2>
@@ -30,5 +33,8 @@
             <a href="">아이디/비번 찾기</a>
         </div>
     </form>
+
+    <!-- Footer -->
+    <jsp:include page="/WEB-INF/views/Common/footer.jsp"></jsp:include>
 </body>
 </html>

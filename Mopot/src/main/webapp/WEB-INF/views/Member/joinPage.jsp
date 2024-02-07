@@ -11,6 +11,9 @@
     <title>JOIN</title>
 </head>
 <body>
+    <!-- Header -->
+    <jsp:include page="/WEB-INF/views/Common/header.jsp"></jsp:include>
+
 	<!-- 회원 가입 페이지 -->
     <form action="joinMember" method="post" class="joinForm" onsubmit="return valid();">
         <h2>회원 가입</h2>
@@ -19,7 +22,7 @@
             <input name="userId" id="userId" required>
             <label>아이디(ID)</label>
             <input type="button" value="ID중복확인" onclick="idCheck();" id="idbtn">
-            <div id="checkResult" style="font-size: 0.8em; display: none;"></div>
+            <div id="checkResult" style="font-size: 0.8em; display: none; margin: 3px"></div>
         </div>
         <div class="join_text">
             <input name="userPw" type="password" class="pw" id="pw">
@@ -42,6 +45,9 @@
             <input class="sub" type="submit" value="가입하기">
         </div>
     </form>
+
+    <!-- Footer -->
+    <jsp:include page="/WEB-INF/views/Common/footer.jsp"></jsp:include>
     
     <!-- ID 중복 체크 -->
     <script>

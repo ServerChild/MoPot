@@ -14,6 +14,12 @@
     box-sizing: border-box;
     font-family: 'GmarketSansMedium';
 }
+
+/* 작성한 글 확인 form */
+.contentForm {
+    margin: 30px;
+}
+
 /* 각 테이블 명칭 */
 .con_list label {
     display: block;
@@ -36,15 +42,18 @@ table {
 }
 
 /* 테이블 행 */
-td {
+table td {
     padding: 8px;
     border-bottom: 1px solid #A0BAED;
     text-align: center;
 }
 
 /* 테이블 열(목록명) */
-th {
+table th {
     padding: 8px;
+}
+
+.listTitle {
     text-align: center;
     border-top: 2px solid #7C96C9;
     border-bottom: 2px solid #7C96C9;

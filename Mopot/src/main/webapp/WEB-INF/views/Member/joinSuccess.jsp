@@ -10,6 +10,9 @@
 	<title>Welcome MoPot</title>
 </head>
 <body>
+	<!-- Header -->
+	<jsp:include page="/WEB-INF/views/Common/header.jsp"></jsp:include>
+
 	<!-- 회원 가입 성공 시 -->
 	<form action="joinSuccess">
 		<div id="success_text">
@@ -22,5 +25,8 @@
 			<button class="sbtn" type="button" onclick="location.href='/'">홈으로</button>
 		</div>
 	</form>
+
+	<!-- Footer -->
+	<jsp:include page="/WEB-INF/views/Common/footer.jsp"></jsp:include>
 </body>
 </html>

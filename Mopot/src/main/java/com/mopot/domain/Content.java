@@ -1,6 +1,7 @@
 package com.mopot.domain;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -30,8 +31,8 @@ public class Content {
 	@Column(name="con_detail")
 	private String conDetail;
 	
-	@Column(name="con_writer")
-	private String conWirter;
+	@Column(name="con_writer", nullable = false)
+	private String conWriter;
 	
 	@CreatedDate
 	@Column(name="con_create_date")
@@ -47,4 +48,14 @@ public class Content {
 	@Column(name="con_category")
 	private String conCategory;
 	
-}
+	@Column(name="con_status")
+	private int conStatus;
+	
+	@Column(insertable=false, columnDefinition="NUMBER DEFAULT 0")
+	private Long conCount;
+	
+	@Column(name="con_re_cnt", insertable=false, columnDefinition="NUMBER DEFAULT 0")
+	private Long conReCnt;
+	
+	
+}	

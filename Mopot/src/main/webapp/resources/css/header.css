@@ -1,0 +1,27 @@
+@font-face {
+	font-family: 'GmarketSansMedium';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+  /* 헤더 css */
+  .userMul {
+  	list-style:none;
+   }
+  .userMli {
+  	float:left;
+	padding:10px;
+  }
+
+  nav {
+  	background-color: #e3f2fd;
+  }
+
+	#fontDiv{
+		font-family: 'GmarketSansMedium';
+	}
+
+	.navbar {
+		font-family: 'GmarketSansMedium';
+	}

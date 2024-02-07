@@ -43,11 +43,19 @@ public class MemberService {
 	// 마이 페이지 - 회원 정보 수정
 	@Transactional
 	public Member updateMyPage(Member member) {
-		Optional<Member> rMember = memberRepository.findByUserId(member.getUserId());
+		Optional<Member> LoginUser = memberRepository.findByUserId(member.getUserId());
 
+		if (LoginUser.isPresent()) {
+			Member loginUser = LoginUser.get();
+			loginUser.setUserNick(member.getUserNick());
+			loginUser.setUserPw(member.getUserPw());
+			loginUser.setUserBirthday(member.getUserBirthday());
+			loginUser.setUserGender(member.getUserGender());
 
-
-		return memberRepository.save(member);
+			return memberRepository.save(loginUser);
+		} else {
+			throw new RuntimeException("로그인된 사용자를 찾을 수 없습니다. ID: " + member.getUserId());
+		}
 	}
 
 	// 마이 페이지 - 닉네임 중복 체크
@@ -59,4 +67,10 @@ public class MemberService {
 	public List<Member> loginUserInfo(String userId) {
 		return memberRepository.findAll();
 	}
+
+	// 마이 페이지 - 회원 탈퇴
+	public void mDelete() {
+		memberRepository.deleteAll();
+	}
+
 }

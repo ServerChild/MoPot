@@ -10,6 +10,14 @@
     <title>MyPage</title>
 </head>
 <body>
+    <!-- Header -->
+    <jsp:include page="/WEB-INF/views/Common/header.jsp"></jsp:include>
+
+    <div>
+        <a href="myPage">내 정보</a>
+        <a href="conList">작성/신청한 글</a>
+    </div>
+
     <!-- 마이페이지 정보 -->
     <form action="myPageInfo" method="post" class="myPageForm" onsubmit="return valid();">
         <div class="mypage_info">
@@ -19,7 +27,7 @@
             <label>닉네임</label>
             <input name="userNick" id="userNick" value="${ loginUser.userNick }">
             <input type="button" value="중복확인" onclick="nickCheck();" id="nickbtn">
-            <div id="checkResult" style="font-size: 0.8em; display: none;"></div>
+            <div id="checkResult" style="font-size: 0.8em; display: none; margin: 3px"></div>
         </div>
         <div class="mypage_info">
             <label>아이디(ID)</label>
@@ -30,8 +38,12 @@
             <input type="password" name="userPw" id="userPw">
         </div>
         <div class="mypage_info">
+            <label>이메일(Email)</label>
+            <input name="userEmail" id="userEmail" value="${ loginUser.userEmail }">
+        </div>
+        <div class="mypage_info">
             <label>생년월일</label>
-            <input name="userBithday" id="userBithday" value="${ loginUser.userBithday }">
+            <input name="userBirthday" id="userBirthday" value="${ loginUser.userBirthday }">
         </div>
         <div class="mypage_info" id="user_gender">
             <label>성별</label>
@@ -39,26 +51,31 @@
 			<input type="radio" name="userGender" value="2"> 여
         </div>
         <div class="mypage_btn">
-            <input type="button" class="my_delete" onclick="mDelete()" value="탈퇴하기">
+            <input type="button" class="my_delete" onclick="mDelete();" value="탈퇴하기">
             <input type="submit" class="my_edit" value="수정하기">
         </div>
     </form>
+
+    <!-- Footer -->
+    <jsp:include page="/WEB-INF/views/Common/footer.jsp"></jsp:include>
     
     <!-- 닉네임 중복 체크 -->
     <script>
 	    let submitCheck = false;
-		
+
+        // 중복체크 여부 확인
 		function valid() {
 			// 중복체크가 되면 true = 회원가입 버튼 동작
 		    if(submitCheck) {
 		        return true;
 		    } else { // 중복체크 x = 회원가입 누르면 뜸(가입 버튼 동작 x)
-		        alert('ID 중복 체크 확인해주세요.'); 
+		        alert('닉네임 중복 확인해주세요.');
 		        return false; 
 		    }
 		}
-    
-		function nickCheck() {
+
+        // 닉네임 중복 여부 확인
+        function nickCheck() {
 		    $.ajax({
 		    	url: "nickCheck",
 		    	data: { nick: $('#userNick').val() },
@@ -87,7 +104,28 @@
 		    		console.log("닉네임 중복체크용 AJAX 통신 실패");
 		    	}
 		    })
-				}
+        }
+
+        // 회원탈퇴
+        function mDelete() {
+            $.ajax({
+                url: "mDelete",
+                data: { id: "${loginUser.userId}" },
+                type: "post",
+                success: function(data) {
+                    consloe.log(data);
+
+                    alert("MoPot Site를 이용해주셔서 감사합니다.");
+
+                    location.href="/";
+                },
+                error: function() {
+                    alert("회원 탈퇴에 실패했습니다.");
+
+                    location.reload();
+                }
+            })
+        }
 	</script>
 </body>
 </html>

@@ -8,7 +8,6 @@
 
 /* 전체 CSS */
 * {
-    margin: 0px;
     padding: 0px;
     text-decoration: none;
     box-sizing: border-box;
@@ -20,11 +19,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 30px;
 }
 
 /* 회원가입 Form - 제목 */
 .joinForm h2 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 /* 입력정보 - id, pw, rePw, name, Email */

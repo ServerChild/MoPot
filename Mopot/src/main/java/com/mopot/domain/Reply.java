@@ -38,4 +38,25 @@ public class Reply {
 	@NonNull
 	private LocalDateTime reModify;
 	
+	@Column(name="ref_cno")
+	private Long refCno;
+	
+	@Column(name="rname")
+	private String rname;
+	
+	@Column(name="ref")
+	private Long ref;
+	
+	@Column(name="re_step")
+	private Long reStep;
+	
+	@Column(name="re_level")
+	private Long reLevel;
+	
+	public Reply(String rname, String reDetail, LocalDateTime reCreate) {
+		this.rname = rname;
+		this.reDetail = reDetail;
+		this.reCreate = reCreate;
+	}
+	
 }

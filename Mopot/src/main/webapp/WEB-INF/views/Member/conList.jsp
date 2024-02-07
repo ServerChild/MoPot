@@ -6,18 +6,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Mopot/src/main/webapp/resources/css/conList.css">
+    <link rel="stylesheet" href="${path}/resources/css/conList.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <title>List</title>
+    <title>MyConList</title>
 </head>
 <body>
+    <!-- Header -->
+    <jsp:include page="/WEB-INF/views/Common/header.jsp"></jsp:include>
+
+    <div>
+        <a href="myPage">내 정보</a>
+        <a href="conList">작성/신청한 글</a>
+    </div>
+
     <!-- 마이페이지(myPage) - 작성 / 신청한 글 -->
-    <form action="/myPage/content" method="post" class="contentForm">
+    <form action="myPageConList" method="post" class="contentForm">
         <div class="con_list">
             <label>내가 작성한 글</label>
             <table class="conForm">
                 <thead>
-                    <tr>
+                    <tr class="listTitle">
                         <th>글 번호</th>
                         <th>제목</th>
                         <th>댓글 수</th>
@@ -36,7 +44,7 @@
             <label>내가 신청한 글</label>
             <table id="statusForm">
                 <thead>
-                    <tr>
+                    <tr class="listTitle">
                         <th>글 번호</th>
                         <th>제목</th>
                         <th>작성자</th>
@@ -54,5 +62,8 @@
             </table>
         </div>
     </form>
+
+    <!-- Footer -->
+    <jsp:include page="/WEB-INF/views/Common/footer.jsp"></jsp:include>
 </body>
 </html>

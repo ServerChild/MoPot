@@ -1,6 +1,6 @@
 package com.mopot.domain;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -46,18 +46,30 @@ public class Member {
 	@Column(name="user_gender")
 	private String userGender;
 	
-	@Column(name="user_bithday")
-	private String userBithday;
+	@Column(name="user_birthday")
+	private String userBirthday;
 	
 	@CreatedDate
 	@Column(name="user_createdate")
-	private LocalDateTime userCreate;
+	private LocalDate userCreate;
 	
 	@LastModifiedDate
 	@Column(name="user_modifydate")
-	private LocalDateTime userModify;
+	private LocalDate userModify;
 
-	
+/*
+
+	// 생성, 수정 시간 형식 변경
+	@PrePersist
+	public void onPrePersist() {
+		String customLocalDateTimeFormat = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
+		LocalDateTime parsedCreateDate = LocalDateTime.parse(customLocalDateTimeFormat, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
+		this.userCreate = parsedCreateDate;
+		this.userModify = parsedCreateDate;
+	}
+*/
+
+
 	public Member(@NonNull String userId, @NonNull String userPw, @NonNull String userName, String userNick,
 			String userGender, String userBithday) {
 		this.userId = userId;
@@ -65,6 +77,13 @@ public class Member {
 		this.userName = userName;
 		this.userNick = userNick;
 		this.userGender = userGender;
-		this.userBithday = userBithday;
+		this.userBirthday = userBithday;
+	}
+
+	public Member(@NonNull String userEmail, String userNick, String userGender, String userBirthday) {
+		this.userEmail = userEmail;
+		this.userNick = userNick;
+		this.userGender = userGender;
+		this.userBirthday = userBirthday;
 	}
 }
