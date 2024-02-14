@@ -5,14 +5,14 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link href="${path}/resources/css/joinPage.css" rel="stylesheet" />
+    <link href="${path}/resources/css/member/joinPage.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <title>JOIN</title>
 </head>
 <body>
     <!-- Header -->
-    <jsp:include page="/WEB-INF/views/Common/header.jsp"></jsp:include>
+    <jsp:include page="/WEB-INF/views/Common/header.jsp" />
 
 	<!-- 회원 가입 페이지 -->
     <form action="joinMember" method="post" class="joinForm" onsubmit="return valid();">
@@ -47,7 +47,7 @@
     </form>
 
     <!-- Footer -->
-    <jsp:include page="/WEB-INF/views/Common/footer.jsp"></jsp:include>
+    <jsp:include page="/WEB-INF/views/Common/footer.jsp" />
     
     <!-- ID 중복 체크 -->
     <script>

@@ -5,15 +5,15 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="${path}/resources/css/myPage.css">
+    <link rel="stylesheet" href="${path}/resources/css/member/myPage.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <title>MyPage</title>
 </head>
 <body>
     <!-- Header -->
-    <jsp:include page="/WEB-INF/views/Common/header.jsp"></jsp:include>
+    <jsp:include page="/WEB-INF/views/Common/header.jsp" />
 
-    <div>
+    <div id="mypage_menu">
         <a href="myPage">내 정보</a>
         <a href="conList">작성/신청한 글</a>
     </div>
@@ -33,10 +33,11 @@
             <label>아이디(ID)</label>
             <input name="userId" id="userId" value="${ loginUser.userId }" readonly>
         </div>
-        <div class="mypage_info">
+<%--        <div class="mypage_info">
             <label>비밀번호</label>
             <input type="password" name="userPw" id="userPw">
         </div>
+--%>
         <div class="mypage_info">
             <label>이메일(Email)</label>
             <input name="userEmail" id="userEmail" value="${ loginUser.userEmail }">
@@ -47,8 +48,16 @@
         </div>
         <div class="mypage_info" id="user_gender">
             <label>성별</label>
-            <input type="radio" name="userGender" value="1"> 남
-			<input type="radio" name="userGender" value="2"> 여
+            <input type="radio" name="userGender" value="1"
+                <c:choose>
+                    <c:when test="${loginUser.userGender eq '1'}"> checked </c:when>
+                </c:choose>
+            > 남
+            <input type="radio" name="userGender" value="2"
+                <c:choose>
+                    <c:when test="${loginUser.userGender eq '2'}"> checked </c:when>
+                </c:choose>
+            > 여
         </div>
         <div class="mypage_btn">
             <input type="button" class="my_delete" onclick="mDelete();" value="탈퇴하기">
@@ -57,7 +66,7 @@
     </form>
 
     <!-- Footer -->
-    <jsp:include page="/WEB-INF/views/Common/footer.jsp"></jsp:include>
+    <jsp:include page="/WEB-INF/views/Common/footer.jsp" />
     
     <!-- 닉네임 중복 체크 -->
     <script>

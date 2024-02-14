@@ -8,11 +8,14 @@
 
 /* 전체 CSS */
 * {
-    margin: 0px;
-    padding: 0px;
     text-decoration: none;
     box-sizing: border-box;
     font-family: 'GmarketSansMedium';
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
 }
 
 #success_text {
@@ -21,7 +24,7 @@
 }
 
 #success_img {
-    content: url("../img/img3.jpeg");
+    content: url("../../img/img3.jpeg");
     display: block;
     margin: auto;
     width: 300px;

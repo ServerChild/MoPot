@@ -8,11 +8,23 @@
 
 /* 전체 CSS */
 * {
-    margin: 0px;
-    padding: 0px;
     text-decoration: none;
     box-sizing: border-box;
     font-family: 'GmarketSansMedium';
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* 마이페이지 메뉴(내정보, 작성/신청글) */
+#mypage_menu {
+    margin: 20px;
+}
+
+#mypage_menu a {
+    margin-left: 20px;
 }
 
 /* 작성한 글 확인 form */
@@ -35,8 +47,9 @@
 
 /* 테이블 전체 */
 table {
+    /*table-layout: auto;*/
     border-collapse: collapse;
-    width: 80%;
+    width: 100%;
     margin: 1rem auto;
     background-color: white;
 }

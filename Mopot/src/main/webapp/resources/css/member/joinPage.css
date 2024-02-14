@@ -8,10 +8,14 @@
 
 /* 전체 CSS */
 * {
-    padding: 0px;
     text-decoration: none;
     box-sizing: border-box;
     font-family: 'GmarketSansMedium';
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
 }
 
 /* 회원가입 Form */

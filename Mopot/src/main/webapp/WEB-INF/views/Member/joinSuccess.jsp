@@ -5,13 +5,13 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<link href="${path}/resources/css/joinSuccess.css" rel="stylesheet" />
+	<link href="${path}/resources/css/member/joinSuccess.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 	<title>Welcome MoPot</title>
 </head>
 <body>
 	<!-- Header -->
-	<jsp:include page="/WEB-INF/views/Common/header.jsp"></jsp:include>
+	<jsp:include page="/WEB-INF/views/Common/header.jsp" />
 
 	<!-- 회원 가입 성공 시 -->
 	<form action="joinSuccess">
@@ -27,6 +27,6 @@
 	</form>
 
 	<!-- Footer -->
-	<jsp:include page="/WEB-INF/views/Common/footer.jsp"></jsp:include>
+	<jsp:include page="/WEB-INF/views/Common/footer.jsp" />
 </body>
 </html>

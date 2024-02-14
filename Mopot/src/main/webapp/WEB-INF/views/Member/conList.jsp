@@ -6,15 +6,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="${path}/resources/css/conList.css">
+    <link rel="stylesheet" href="${path}/resources/css/member/conList.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <title>MyConList</title>
 </head>
 <body>
     <!-- Header -->
-    <jsp:include page="/WEB-INF/views/Common/header.jsp"></jsp:include>
+    <jsp:include page="/WEB-INF/views/Common/header.jsp" />
 
-    <div>
+    <div id="mypage_menu">
         <a href="myPage">내 정보</a>
         <a href="conList">작성/신청한 글</a>
     </div>
@@ -34,8 +34,8 @@
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
+                        <td>TestTestTestTestTestTestTestTest</td>
+                        <td>123</td>
                     </tr>
                 </tbody>
             </table>
@@ -53,10 +53,10 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
+                        <td>22</td>
+                        <td>TestTestTestTest</td>
+                        <td>admin</td>
+                        <td>1 / 1000</td>
                     </tr>
                 </tbody>
             </table>
@@ -64,6 +64,6 @@
     </form>
 
     <!-- Footer -->
-    <jsp:include page="/WEB-INF/views/Common/footer.jsp"></jsp:include>
+    <jsp:include page="/WEB-INF/views/Common/footer.jsp" />
 </body>
 </html>

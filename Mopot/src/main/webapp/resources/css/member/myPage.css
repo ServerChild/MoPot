@@ -8,15 +8,28 @@
 
 /* 전체 CSS */
 * {
-    padding: 0px;
     text-decoration: none;
     box-sizing: border-box;
     font-family: 'GmarketSansMedium';
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* 마이페이지 메뉴(내정보, 작성/신청글) */
+#mypage_menu {
+    margin: 20px;
+}
+
+#mypage_menu a {
+    margin-left: 20px;
+}
+
 /* 마이페이지 정보 폼 */
 #img {
-    content: url("../img/img1.jpeg");
+    content: url("../../img/img1.jpeg");
     width: 200px;
 }
 
@@ -69,6 +82,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    margin-top: 40px;
 }
 
 .my_edit, .my_delete {

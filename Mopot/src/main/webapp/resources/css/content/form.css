@@ -1,20 +1,20 @@
 /* 전체 div */
 div{
-	width : 100%;
-	margin : 0 auto;
-	border : 2px black;
-} 
+    width : 100%;
+    margin : 0 auto;
+    border : 2px black;
+}
 #writeForm{
-	width : 30%;
-	background-color: #e0e0e0;
+    width : 30%;
+    background-color: #e0e0e0;
 }
 /* 상단 입력 부분 */
 
 
 /* 상단 첫번째 (말머리 제목) */
 .writeFormHead{
-	text-align: center;
-	width: 90%;
+    text-align: center;
+    width: 90%;
     padding: 0px;
 }
 /* 상단 첫번째 왼쪽 */
@@ -25,9 +25,9 @@ div{
     text-align: left;
 }
 .conCategory {
-	width: 80%;
-	height: 44px;
-	
+    width: 80%;
+    height: 44px;
+
 }
 /* 상단 첫번째 오른쪽 */
 .writeFormHeadRight{
@@ -44,8 +44,8 @@ div{
 }
 /* 폼 입력 중간 (내용) */
 .writeFormBody{
-	width: 90%;
-	text-align: left;
+    width: 90%;
+    text-align: left;
     clear: both;
 }
 
@@ -54,23 +54,23 @@ div{
 }
 
 .conDetail{
-	text-align: left;
+    text-align: left;
     width: 95%;
     resize: none;
 }
 
 /* 임시 - 작성자 */
 .conWriter {
-	width: 90%;
-	text-align: left;
+    width: 90%;
+    text-align: left;
 }
 /* 폼 입력 하단 (태그) */
 .writeFormTag{
-	width: 90%;
-	text-align: left;
+    width: 90%;
+    text-align: left;
 }
 .conTag{
-	text-align: left;
+    text-align: left;
     width: 100%;
     height: 44px;
     resize: none;
@@ -78,30 +78,30 @@ div{
 
 /* 폼 버튼 입력 */
 .button{
-   border-radius: 10px;
-  
+    border-radius: 10px;
+
 }
 
 .writeFromFoot{
-	text-align: center;
-  
+    text-align: center;
+
 }
 
 .write-btn {
-	background-color: #4B4B4B;
+    background-color: #4B4B4B;
     color :white;
     border-radius: 5px;
     font-size: 14px;
-	
+
 }
 .reset-btn {
-	background-color: #4B4B4B;
+    background-color: #4B4B4B;
     color :white;
     border-radius: 5px;
     font-size: 14px;
 }
 .list-btn {
-	background-color: #4B4B4B;
+    background-color: #4B4B4B;
     color :white;
     border-radius: 5px;
     font-size: 14px;

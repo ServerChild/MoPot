@@ -6,28 +6,28 @@
 }
 
 /* 전체 CSS */
-* {
+footer {
 	display: block;
+	margin: 0 auto;
 	text-decoration: none;
 	text-align: center;
+	height: 130px;
     font-family: 'GmarketSansMedium';
 	font-size: 13px;
-}
-
-
-nav {
-	margin: 10px;
+	background-color: #7C96C9;
 }
 
 /* GitHub 태그 */
-a:link { color: black; }
-a:visited { color: white; }
+#foot-link a:link { color: black; }
+#foot-link a:visited { color: white; }
 
-/* footer 크기 */
-footer {
-	width: 100%;
-	height: 130px; /* 내용물에 따라 알맞는 값 설정 */
-	bottom: 0px;
-	position: absolute;
-	background-color: #7C96C9;
+/* footer 내용 줄바꿈 */
+#foot-span span {
+	display: block;
+}
+
+/* footer 내용 위치 */
+.foot-body {
+	display: flow-root;
+	margin-top: 10px;
 }
