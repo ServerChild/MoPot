@@ -32,4 +32,14 @@ public interface ContentRepository extends JpaRepository<Content, Long> {
 
     /* 리스트 "검색" 보기 페이지 - (4)태그검색(태그) */
     Page<Content> findByConTagContaining(String searchKeyword, Pageable pageable);
+
+    /* 이전글 다음글 존재하는지 여부 확인 */
+    boolean existsByConNo(Long conNo);
+
+    /* 다음글이 DB에 있는 Content의 ConNo Max 값과 비교 */
+    Content findFirstByOrderByConNoDesc();
+
+    /* 이전글이 DB에 있는 Content의 ConNo min 값과 비교 */
+    Content findFirstByOrderByConNoAsc();
+
 }

@@ -100,4 +100,20 @@ public class ContentService {
         });
     }
 
+    /* 이전, 다음 페이지 이동 */
+    /* 이동하는 페이지 conNo가 존재하는지 확인하는 용도 */
+    public boolean existsByConNo(Long conNo) {
+        return contentRepository.existsByConNo(conNo);
+    }
+
+    /* 다음글이 DB에 있는 Content의 ConNo Max 값과 비교 */
+    public Content findFirstByOrderByConNoDesc() {
+        return contentRepository.findFirstByOrderByConNoDesc();
+    }
+
+    /* 이전글이 DB에 있는 Content의 ConNo min 값과 비교  */
+    public Content findFirstByOrderByConNoAsc() {
+        return contentRepository.findFirstByOrderByConNoAsc();
+    }
+
 }

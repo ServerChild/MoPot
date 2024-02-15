@@ -1,9 +1,13 @@
 package com.mopot.controller;
 
+import com.mopot.domain.Content;
 import com.mopot.domain.Member;
+import com.mopot.service.ContentService;
 import com.mopot.service.MemberService;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,6 +20,9 @@ public class MemberController {
 
     @Autowired
     MemberService memberService;
+
+    @Autowired
+    ContentService contentService;
 
     @Autowired
     PasswordEncoder pEncoder;
@@ -100,7 +107,7 @@ public class MemberController {
     }
 
     // 마이 페이지 - 회원 정보 조회
-    @GetMapping("/myPageInfo")
+    @GetMapping("/myPage/myPageInfo")
     public String viewMyPage(Member member, Model model) {
         Member loginUser = memberService.loginMember(member);
 
@@ -114,7 +121,7 @@ public class MemberController {
     }
 
     // 마이 페이지 - 회원 정보 수정
-    @PostMapping("/myPageInfo")
+    @PostMapping("/myPage/myPageInfo")
     public String updateMyPage(Member member, Model model) {
         Member loginUser = memberService.loginMember(member);
 
@@ -138,9 +145,24 @@ public class MemberController {
         return memberService.nickCheck(nick);
     }
 
-    // 마이 페이지 - 작성한 글, 댓글 조회
+    // 마이 페이지 - 비밀번호 변경
+    @RequestMapping("/myPage/rePwdPage")
+    public String rePwdPage() {
+        return "Member/rePwdPage";
+
+
+    }
+
+    // 마이 페이지 - 작성한 글, 신청 조회
     @RequestMapping("/conList")
     public String myPageContent() {
+        return "Member/conList";
+    }
+
+    @GetMapping("/myPageConList")
+    public String myPageCreateContent(Pageable pageable, Model model) {
+        Page<Content> contentList = contentService.contentList(pageable);
+
         return "Member/conList";
     }
 

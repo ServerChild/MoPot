@@ -18,40 +18,41 @@ html, body {
 
 .container {
 	font-family: 'GmarketSansMedium';
-	min-height: 100vh;
     position: relative;
-	padding-bottom: 130px;
 }
 
 .wrapper {
 	height: 100vh;
-	display: grid;
-	place-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.typing-demo {
-	width: 67ch;
-	animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-	white-space: nowrap;
-	overflow: hidden;
-	border-right: 3px solid;
-}
-
-.typing-demo a {
-	font-size: 80px;
+#typing {
+	padding: 30px 0;
+	text-align: center;
+	font-size: 100px;
 	font-family: 'GmarketSansMedium';
-	text-decoration: none;
-	color: #000;
 }
 
-@keyframes typing {
+/*@keyframes typing {
 	from {
 		width: 0
 	}
 }
-	
+
 @keyframes blink {
 	50% {
 		border-color: transparent
 	}
+}*/
+
+@keyframes blink-effect {
+	50% {
+		opacity: 0;
+	}
+}
+
+.cursor {
+	animation: blink-effect .7s step-end infinite;
 }

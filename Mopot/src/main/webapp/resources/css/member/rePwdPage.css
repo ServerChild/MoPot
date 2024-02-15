@@ -18,34 +18,35 @@ html, body {
     padding: 0;
 }
 
-/* 로그인 Form */
-.loginForm {
+/* 마이페이지 메뉴(내정보, 작성/신청글) */
+#mypage_menu {
+    margin: 20px;
+}
+
+#mypage_menu a {
+    margin-left: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+#mypage_menu a:active {
+    color: #5872A5;
+}
+
+.rePwdForm {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 50px;
+    margin: 90px;
 }
 
-/* 로그인 Form - 제목 */
-.loginForm h2 {
-    margin-bottom: 20px;
+.pwdInput {
+    margin: 30px;
 }
 
-/* 입력정보 - id, pw */
-.login_text {
-    text-align: left;
-    position: relative;
-    margin-bottom: 10px;
-    width: 300px;
-    margin: 10px;
-    margin-left: 50px;
-    padding: 10px 10px;
-}
-
-/* 정보 입력창 */
-.login_text input {
+.pwdInput input {
     font-size: 13px;
-    width: 250px;
+    width: 200px;
     padding: 5px;
     border-radius: 5px;
     border: 1px solid gray;
@@ -55,25 +56,24 @@ html, body {
     z-index: 1;
 }
 
-/* 로그인 필요 정보명 */
-.login_text label {
-    position: absolute;
+.pwdInput label {
     color: black;
-    left: -100px;
     font-size: 14px;
     margin-top: 5px;
+    margin-right: 30px;
 }
 
-/* Button */
-.login_button {
+/* button - 수정 */
+.rePwd_btn {
     display: flex;
     justify-content: center;
     width: 100%;
+    margin-top: 40px;
 }
 
-.sub {
+.pw_edit {
     position:relative;
-    left:8%;
+    left:40%;
     transform: translateX(-50%);
     margin: 10px;
     width:100px;
@@ -85,23 +85,6 @@ html, body {
     cursor:pointer;
 }
 
-.sub:active {
+.pw_edit:active {
     background-color: #5872A5;
-}
-
-/* 회원가입 이동 */
-.joinPage_a {
-    margin-top: 30px;
-    margin-left: 50px;
-    font-size: 13px;
-}
-
-.joinPage_a > a {
-    text-decoration: none;
-    margin-right: 20px;
-    color: black;
-}
-
-.joinPage_a a:active {
-    color: #5872A5;
 }

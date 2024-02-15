@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -154,4 +156,90 @@ public class ContentController {
         return "redirect:/detailForm?conNo=" + conNo;
     }
 
+    /* 이전글 다음글 */
+    /* 이전페이지 조회시 1이상이고 페이지가 없을경우 계속 -1 해서 존재하는 페이지 까지 조회  */
+    @GetMapping("/checkPrevPage.bo")
+    public ResponseEntity<?> checkPrevPage(@RequestParam("conNo") Long conNo) {
+        Long prevPageNo = conNo - 1;
+        Content minConContent = contentService.findFirstByOrderByConNoAsc();
+
+        //글이 없는 경우 처리 (미정 ★: 데이터 싹 밀고 테스트 해봐야 함 )
+        if (minConContent == null) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("콘텐츠가 없습니다.");
+        }
+
+        //이전 페이지 처리 하면서 -1 씩 반복문
+        while (prevPageNo >= 1) {
+            if (contentService.existsByConNo(prevPageNo)) {
+                String redirectUrl = "/detailForm?conNo=" + prevPageNo;
+                return ResponseEntity.ok().body(new RedirectDTO(redirectUrl));
+            }
+            //DB저장된 Content중에 ConNo Min값 구해서 비교하기
+            else if(prevPageNo < minConContent.getConNo()) {
+                break;
+            } else {
+                prevPageNo--;
+            }
+        }
+        RedirectDTO response = new RedirectDTO(null, "첫 글입니다."); // URL 대신 메시지 전달
+        return ResponseEntity.ok().body(response); // 이전 페이지가 없는 경우 목록으로 리다이렉트
+        //한줄로 return ResponseEntity.ok().body(new RedirectDTO(null, "첫 글입니다."));
+    }
+    /* 다음페이지 조회시 1이상이고 페이지가 없을경우 계속 +1 해서 존재하는 페이지 까지 조회  */
+    @GetMapping("/checkNextPage.bo")
+    public ResponseEntity<?> checkNextPage(@RequestParam("conNo") Long conNo) {
+        Long nextPageNo = conNo + 1;
+        Content maxConContent = contentService.findFirstByOrderByConNoDesc();
+        while (nextPageNo >= 1) {
+            if (contentService.existsByConNo(nextPageNo)) {
+                String redirectUrl = "/detailForm?conNo=" + nextPageNo;
+                return ResponseEntity.ok().body(new RedirectDTO(redirectUrl));
+            }
+            //DB저장된 Content중에 ConNo Max값 구해서 비교하기
+            else if(nextPageNo > maxConContent.getConNo()) {
+                break;
+            } else {
+                nextPageNo++;
+            }
+        }
+        RedirectDTO response = new RedirectDTO(null, "가장 최신 글입니다."); // URL 대신 메시지 전달
+        return ResponseEntity.ok().body(response);
+        //return ResponseEntity.ok().body(new RedirectDTO("/list")); // 다음 페이지가 없는 경우 목록으로 리다이렉트
+    }
+
+    /* 이전 페이지 다음페이지 리다이렉트용 클래스 */
+    private static class RedirectDTO {
+        private String redirectUrl;
+        private String message; // alert 메시지 용도 추가
+
+        public RedirectDTO(String redirectUrl) {
+            this.redirectUrl = redirectUrl;
+        }
+
+        public RedirectDTO(String redirectUrl, String message) {
+            this.redirectUrl = redirectUrl;
+            this.message = message;
+        }
+
+        // getter
+        public String getRedirectUrl() {
+            return redirectUrl;
+        }
+
+        // setter
+        public void setRedirectUrl(String redirectUrl) {
+            this.redirectUrl = redirectUrl;
+        }
+
+        //getter
+        public String getMessage() {
+            return message;
+        }
+
+        // setter
+        public void setMessage(String message) {
+            this.message = message;
+        }
+
+    }
 }
