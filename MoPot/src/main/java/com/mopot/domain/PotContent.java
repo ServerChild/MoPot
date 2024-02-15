@@ -49,5 +49,8 @@ public class PotContent {
 	
 	@Column(name="pot_status")
 	private int potStatus;
+
+	@Column(name="pot_headcount")
+	private int potHeadcount;
 	
 }

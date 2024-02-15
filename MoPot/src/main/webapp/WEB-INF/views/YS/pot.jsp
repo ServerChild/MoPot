@@ -11,6 +11,8 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-cNR9NT1lsRJlMz0BRpdMwPpURs1xmTw56FUDjNM9PIpTzFZfVVoXF5QTbpRRzgFA" crossorigin="anonymous">
+
 <title>팟 구하기</title>
 <style>
 	div {
@@ -66,7 +68,19 @@
 					<!-- 버튼에 온클릭 걸어서 스크립트 실행 -->
 					<button type="button" class="btn btn-secondary" onclick="updateProgress(1, 70)">신청</button>
 				</td>
-				<td style="width: 2%;"></td>
+				<td style="width: 2%;">
+					<div class="dropdown">
+							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="bi bi-three-dots-vertical"></i>
+							</button>
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+									<!-- 수정 버튼 -->
+									<a class="dropdown-item" href="#" onclick="editPost(1)">수정</a>
+									<!-- 삭제 버튼 -->
+									<a class="dropdown-item" href="#" onclick="deletePost(1)">삭제</a>
+							</div>
+					</div>
+			</td>
 			</tr>
 			<tr>
 				<td></td>

@@ -31,9 +31,25 @@
 	<br><br>
 
 	<!-- 본문 -->
-	<label for="postContent">본문</label><br>
-	<textarea id="postContent" name="postContent" rows="4" cols="50" required></textarea>
-	<br><br>
+	<div class="container text-center">
+		<div class="row">
+				<div class="col-lg-10">
+						<table class="table border">
+							<tr>
+								<label for="potContent">본문</label><br>
+								<sup>(<span id="nowByte">0</span>/100bytes)</sup>
+							</tr>
+								<tr>
+										<td>
+												<form id="frm_textArea" name="frm_textArea">
+														<textarea rows="10" class="form-control" id="textArea_byteLimit" name="textArea_byteLimit" onkeyup="fn_checkByte(this)"></textarea>
+												</form>
+										</td>
+								</tr>
+						</table>
+				</div>
+		</div>
+</div>	<br><br>
 
 	<!-- 모집 인원 -->
 	<!-- 모집 인원을 본인이 적게 할 지 아니면 선택하게 할 지 정해야 함. 선택하게 할거면 최대인원은 몇명으로 할 지도 정해야함 -->
@@ -44,14 +60,22 @@
 	<br><br>
  
 	<!-- 해시태그 -->
-	<form action="YourServlet" method="post">
-    <label for="hashtags">해시태그 입력</label><br>
-    <input type="text" name="hashtags" id="hashtags">
-		<!--<input type="submit" value="확인">-->
-	</form>
+	<!-- 미완성 -->
+	<div class="tr_hashTag_area">
+    <p>해시태그 구현</p>
+			<div class="form-group">
+					<input type="hidden" value="" name="tag" id="rdTag" />
+			</div>
+	
+				<ul id="tag-list"></ul>
+									
+			<div class="form-group">
+				<input type="text" id="tag" size="7" placeholder="엔터로 해시태그를 등록해주세요." style="width: 300px;"/>
+			</div>
+	</div>
 	<br>
 
-	<br><br>
+	<br>
 
 	<!-- 등록, 취소 버튼 -->
 	<button type="submit">등록</button>
@@ -61,5 +85,9 @@
 	<br><!-- br 말고 마진으로 간격 조정 해야함 -->
 	<jsp:include page="/WEB-INF/views/common/footer.jsp"></jsp:include>
 </form>
+
+<script type="text/javascript" src="/src/main/webapp/resources/js/tag.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="/src/main/webapp/resources/js/comentBytes.js"></script>
 </body>
 </html>

@@ -15,7 +15,9 @@
 <body>
 
 <div class="jumbotron text-center" style="margin-bottom:0">
-  <p>사용한 프로그래밍 언어 등등 정리</p>
+  <p>
+    사용한 프로그래밍 언어 등등 정리
+  </p>
 </div>
 
 

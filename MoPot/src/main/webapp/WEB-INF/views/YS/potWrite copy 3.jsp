@@ -44,11 +44,18 @@
 	<br><br>
  
 	<!-- 해시태그 -->
-	<form action="YourServlet" method="post">
-    <label for="hashtags">해시태그 입력</label><br>
-    <input type="text" name="hashtags" id="hashtags">
-		<!--<input type="submit" value="확인">-->
-	</form>
+	<div class="tr_hashTag_area">
+    <p>해시태그 구현</p>
+			<div class="form-group">
+					<input type="hidden" value="" name="tag" id="rdTag" />
+			</div>
+	
+				<ul id="tag-list"></ul>
+									
+			<div class="form-group">
+				<input type="text" id="tag" size="7" placeholder="엔터로 해시태그를 등록해주세요." style="width: 300px;"/>
+			</div>
+	</div>
 	<br>
 
 	<br><br>
@@ -61,5 +68,7 @@
 	<br><!-- br 말고 마진으로 간격 조정 해야함 -->
 	<jsp:include page="/WEB-INF/views/common/footer.jsp"></jsp:include>
 </form>
+
+<script type="text/javascript" src="/src/main/webapp/resources/js/tag.js"></script>
 </body>
 </html>

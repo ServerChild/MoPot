@@ -1,8 +1,6 @@
 
 B
 MoPot/build.gradle,e\3\e310847305a07cae2d44b87026175962fc98362a
-d
-4MoPot/src/main/java/com/mopot/MoPot2Application.java,a\8\a8dc43ab1611ba0147088c9e9c8ffb6eee55dd11
 c
 3MoPot/src/main/java/com/mopot/MoPotApplication.java,9\c\9c2955df433c7d24e805c66eafb554e41cef1ad2
 Z
@@ -27,3 +25,23 @@ i
 9MoPot/src/main/webapp/WEB-INF/views/YS/potWrite copy.html,e\7\e7eae35a5080f18f82458f142ea8c54a664a10d8
 h
 8MoPot/src/main/webapp/WEB-INF/views/YS/potWrite copy.jsp,e\0\e0a1b54d8ea914c28af4f58373ffc77bb44d9812
+k
+;MoPot/src/main/java/com/mopot/controller/PotController.java,0\8\08799707a5c14313953a020a85050fa29a36661f
+d
+4MoPot/src/main/java/com/mopot/domain/PotContent.java,9\f\9ffadd05e14f23402f4cb137fd2d4ecf3b5f065f
+e
+5MoPot/src/main/java/com/mopot/service/PotService.java,2\1\21bb4ae1492c89370540de8193bc8bf76a7f2e32
+j
+:MoPot/src/main/webapp/WEB-INF/views/YS/potWrite copy 2.jsp,b\f\bf839872df77ef9eb1bacb8e8865e1d98bc0aa78
+k
+;MoPot/src/main/java/com/mopot/repository/PotRepository.java,c\2\c27e4ce5d641c20d3224343e68b7a71525b6b207
+n
+>MoPot/src/main/java/com/mopot/repository/MemberRepository.java,d\7\d7a21be04582f55cc251d3e257501aec7bbbed0e
+c
+3MoPot/src/main/webapp/WEB-INF/views/YS/tagTest.html,c\3\c37979b8d80688ed3b15ae47b81df30af029dcb9
+o
+?MoPot/src/main/java/com/mopot/controller/ContentController.java,b\8\b8b00022410c4eb1fb930b0818fff4b7e3d1727e
+j
+:MoPot/src/main/webapp/WEB-INF/views/YS/potWrite copy 3.jsp,d\a\dae75f405e1919490c5dd905196154c19c78355d
+j
+:MoPot/src/main/webapp/WEB-INF/views/YS/potWrite copy 4.jsp,1\2\12be93867c7063336164fa859f91996bc8510631
