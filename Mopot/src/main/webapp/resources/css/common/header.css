@@ -11,11 +11,7 @@ header {
 	text-decoration: none;
 	font-family: 'GmarketSansMedium';
 	font-size: 15px;
-    font-weight: bold;
-<<<<<<< HEAD
-    height: 70px;
-=======
->>>>>>> HS
+	font-weight: bold;
 }
 
 a {
@@ -38,18 +34,11 @@ a {
 /* 팟 구하기, 자유게시판 항목 */
 .nav-item {
 	text-align: center;
-<<<<<<< HEAD
-}
-
-.nav-item a {
-	margin-right: 10%;
-=======
 	margin-right: 20%;
 }
 
 .nav-item a {
 	margin-right: 8%;
->>>>>>> HS
 }
 
 .nav-item a:link, a:visited { color: black }
@@ -58,23 +47,17 @@ a {
 /* 로그인, 로그아웃 */
 #head-icon {
 	text-align: right;
-<<<<<<< HEAD
-=======
 	margin-right: 3%;
->>>>>>> HS
 }
 
 #head-icon a {
 	margin-right: 5%;
 }
 
-<<<<<<< HEAD
-=======
 #head-welcome {
 	text-align: right;
 	margin-right: 4%;
 }
 
->>>>>>> HS
 #head-icon a:link, a:visited { color: black }
 #head-icon a:active { color: #5872A5 }

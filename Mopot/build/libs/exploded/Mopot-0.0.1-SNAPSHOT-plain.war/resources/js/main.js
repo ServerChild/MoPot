@@ -1,6 +1,10 @@
 "use strict";
 
+<<<<<<< HEAD
 // 스크롤 위치를 이전 위치로 복원하지 않도록 설정 (https://blog.coderifleman.com/2016/11/28/scroll-restoration-property-of-history/)
+=======
+// 스크롤 위치를 이전 위치로 복원하지 않도록 설정
+>>>>>>> HS
 if (history.scrollRestoration) {
     window.history.scrollRestoration = "manual";
 }
@@ -30,4 +34,8 @@ function typingIntroTitle() {
 
         return;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> HS

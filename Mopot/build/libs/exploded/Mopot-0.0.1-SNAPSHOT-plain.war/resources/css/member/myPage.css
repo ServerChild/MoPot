@@ -25,6 +25,12 @@ html, body {
 
 #mypage_menu a {
     margin-left: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+#mypage_menu a:active {
+    color: #5872A5;
 }
 
 /* 마이페이지 정보 폼 */
@@ -67,6 +73,7 @@ html, body {
     color: black;
     left: -100px;
     font-size: 14px;
+    margin-top: 5px;
 }
 
 #user_gender {

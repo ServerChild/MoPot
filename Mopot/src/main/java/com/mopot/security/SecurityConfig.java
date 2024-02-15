@@ -1,4 +1,4 @@
-package com.mopot.security;
+package com.mopot.Security;
 
 /*import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

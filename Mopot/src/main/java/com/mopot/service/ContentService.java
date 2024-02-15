@@ -100,8 +100,6 @@ public class ContentService {
         });
     }
 
-<<<<<<< HEAD
-=======
     /* 이전, 다음 페이지 이동 */
     /* 이동하는 페이지 conNo가 존재하는지 확인하는 용도 */
     public boolean existsByConNo(Long conNo) {
@@ -118,5 +116,4 @@ public class ContentService {
         return contentRepository.findFirstByOrderByConNoAsc();
     }
 
->>>>>>> HS
 }

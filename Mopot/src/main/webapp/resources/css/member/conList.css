@@ -25,15 +25,12 @@ html, body {
 
 #mypage_menu a {
     margin-left: 20px;
-<<<<<<< HEAD
-=======
     font-weight: bold;
     color: black;
 }
 
 #mypage_menu a:active {
     color: #5872A5;
->>>>>>> HS
 }
 
 /* 작성한 글 확인 form */

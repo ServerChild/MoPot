@@ -60,7 +60,8 @@ html, body {
     position: absolute;
     color: black;
     left: -100px;
-    font-size: 13px;
+    font-size: 14px;
+    margin-top: 5px;
 }
 
 /* id 중복확인 버튼 */

@@ -72,21 +72,13 @@ public class Member {
 
 
     public Member(@NonNull String userId, @NonNull String userPw, @NonNull String userName, String userNick,
-<<<<<<< HEAD
-                  String userGender, String userBithday) {
-=======
                   String userGender, String userBirthday) {
->>>>>>> HS
         this.userId = userId;
         this.userPw = userPw;
         this.userName = userName;
         this.userNick = userNick;
         this.userGender = userGender;
-<<<<<<< HEAD
-        this.userBirthday = userBithday;
-=======
         this.userBirthday = userBirthday;
->>>>>>> HS
     }
 
     public Member(@NonNull String userEmail, String userNick, String userGender, String userBirthday) {

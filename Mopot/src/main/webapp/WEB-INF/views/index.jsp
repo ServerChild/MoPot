@@ -13,21 +13,14 @@
     <!-- 메인 홈페이지 본문 -->
     <div class="container">
         <div class="wrapper">
-<<<<<<< HEAD
-            <div class="typing-demo">
-                <a>MoPot(모여라 팟)</a>
-=======
             <div id="typing">
 
->>>>>>> HS
             </div>
         </div>
     </div>
 
     <!-- 푸터 부분 -->
     <jsp:include page="/WEB-INF/views/Common/footer.jsp" />
-<<<<<<< HEAD
-=======
 
 
     <script>
@@ -92,6 +85,5 @@
             typeAnimationIt();
         });
     </script>
->>>>>>> HS
 </body>
 </html>

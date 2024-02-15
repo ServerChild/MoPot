@@ -9,11 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
-<<<<<<< HEAD
-=======
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
->>>>>>> HS
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -159,8 +156,6 @@ public class ContentController {
         return "redirect:/detailForm?conNo=" + conNo;
     }
 
-<<<<<<< HEAD
-=======
     /* 이전글 다음글 */
     /* 이전페이지 조회시 1이상이고 페이지가 없을경우 계속 -1 해서 존재하는 페이지 까지 조회  */
     @GetMapping("/checkPrevPage.bo")
@@ -247,5 +242,4 @@ public class ContentController {
         }
 
     }
->>>>>>> HS
 }

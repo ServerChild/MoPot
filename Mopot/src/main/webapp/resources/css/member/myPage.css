@@ -25,15 +25,12 @@ html, body {
 
 #mypage_menu a {
     margin-left: 20px;
-<<<<<<< HEAD
-=======
     font-weight: bold;
     color: black;
 }
 
 #mypage_menu a:active {
     color: #5872A5;
->>>>>>> HS
 }
 
 /* 마이페이지 정보 폼 */
@@ -76,10 +73,7 @@ html, body {
     color: black;
     left: -100px;
     font-size: 14px;
-<<<<<<< HEAD
-=======
     margin-top: 5px;
->>>>>>> HS
 }
 
 #user_gender {
