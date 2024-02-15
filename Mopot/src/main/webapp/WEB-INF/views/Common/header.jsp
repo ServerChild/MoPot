@@ -20,7 +20,7 @@
 
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <div class="nav-item">
-                        <a class="nav-link" href="#">팟구하기</a>
+                        <a class="nav-link" href="pot">팟구하기</a>
                         <a class="nav-link" href="list">자유게시판</a>
                     </div>
             </div>

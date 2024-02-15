@@ -11,5 +11,9 @@ public class PotController {
     @Autowired
     PotService potService;
 
+    @RequestMapping("/pot")
+    public String potContent() {
+        return "Pot/pot";
+    }
 }
 
