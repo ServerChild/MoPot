@@ -18,13 +18,18 @@ html, body {
 
 .container {
 	font-family: 'GmarketSansMedium';
+<<<<<<< HEAD
 	min-height: 100vh;
     position: relative;
 	padding-bottom: 130px;
+=======
+    position: relative;
+>>>>>>> HS
 }
 
 .wrapper {
 	height: 100vh;
+<<<<<<< HEAD
 	display: grid;
 	place-items: center;
 }
@@ -45,13 +50,46 @@ html, body {
 }
 
 @keyframes typing {
+=======
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#typing {
+	padding: 30px 0;
+	text-align: center;
+	font-size: 100px;
+	font-family: 'GmarketSansMedium';
+}
+
+/*@keyframes typing {
+>>>>>>> HS
 	from {
 		width: 0
 	}
 }
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> HS
 @keyframes blink {
 	50% {
 		border-color: transparent
 	}
+<<<<<<< HEAD
 }
+=======
+}*/
+
+@keyframes blink-effect {
+	50% {
+		opacity: 0;
+	}
+}
+
+.cursor {
+	animation: blink-effect .7s step-end infinite;
+}
+>>>>>>> HS

@@ -16,6 +16,10 @@
 
     <div id="mypage_menu">
         <a href="myPage">내 정보</a>
+<<<<<<< HEAD
+=======
+        <a href="rePwdPage">비밀번호 변경</a>
+>>>>>>> HS
         <a href="conList">작성/신청한 글</a>
     </div>
 

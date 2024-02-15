@@ -37,6 +37,11 @@
                 <c:otherwise>
                     <!-- 사용자가 로그인한 경우 -->
                     <div id="head-icon">
+<<<<<<< HEAD
+=======
+                        <p>${loginUser.userId} 님 환영합니다. ヾ(˹ᆺ˺✿)ﾉﾞ</p>
+
+>>>>>>> HS
                         <a href="logout">로그아웃</a>
                         <a href="myPage">마이페이지</a>
                     </div>

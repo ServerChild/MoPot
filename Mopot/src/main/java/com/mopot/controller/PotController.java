@@ -3,11 +3,19 @@ package com.mopot.controller;
 import com.mopot.service.PotService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+<<<<<<< HEAD
+=======
+import org.springframework.web.bind.annotation.RequestMapping;
+>>>>>>> HS
 
 @Controller
 public class PotController {
 
     @Autowired
     PotService potService;
+<<<<<<< HEAD
+=======
+
+>>>>>>> HS
 }
 

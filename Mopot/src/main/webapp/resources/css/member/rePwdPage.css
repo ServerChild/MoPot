@@ -25,41 +25,26 @@ html, body {
 
 #mypage_menu a {
     margin-left: 20px;
-<<<<<<< HEAD
-=======
     font-weight: bold;
     color: black;
 }
 
 #mypage_menu a:active {
     color: #5872A5;
->>>>>>> HS
 }
 
-/* 마이페이지 정보 폼 */
-#img {
-    content: url("../../img/img1.jpeg");
-    width: 200px;
-}
-
-.myPageForm {
+.rePwdForm {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 90px;
+}
+
+.pwdInput {
     margin: 30px;
 }
 
-.mypage_info {
-    text-align: left;
-    position: relative;
-    margin-bottom: 10px;
-    width: 300px;
-    margin: 10px;
-    margin-left: 50px;
-    padding: 10px 10px;
-}
-
-.mypage_info input {
+.pwdInput input {
     font-size: 13px;
     width: 200px;
     padding: 5px;
@@ -71,34 +56,22 @@ html, body {
     z-index: 1;
 }
 
-.mypage_info label {
-    position: absolute;
+.pwdInput label {
     color: black;
-    left: -100px;
     font-size: 14px;
-<<<<<<< HEAD
-=======
     margin-top: 5px;
->>>>>>> HS
+    margin-right: 30px;
 }
 
-#user_gender {
-    display: flex;
-    flex-direction: row;
-    margin-right: 130px;
-    font-size: 12px;
-    width: 180px;
-}
-
-/* button - 수정, 삭제 */
-.mypage_btn {
+/* button - 수정 */
+.rePwd_btn {
     display: flex;
     justify-content: center;
     width: 100%;
     margin-top: 40px;
 }
 
-.my_edit, .my_delete {
+.pw_edit {
     position:relative;
     left:40%;
     transform: translateX(-50%);
@@ -112,21 +85,6 @@ html, body {
     cursor:pointer;
 }
 
-.my_edit:active, .my_delete:active {
-    background-color: #5872A5;
-}
-
-.mypage_info > #nickbtn {
-    position: absolute;
-    width: 80px;
-    margin-left: 20px;
-    background: #7C96C9;
-    color:white;
-    border:none;
-    border-radius: 5px;
-    cursor:pointer;
-}
-
-.mypage_info > #nickbtn:active {
+.pw_edit:active {
     background-color: #5872A5;
 }

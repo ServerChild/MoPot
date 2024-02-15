@@ -69,7 +69,11 @@
                                     <%-- (3) 작성자 --%>
                                 <td class=conWriter><c:out value="${content.conWriter}"/></td>
                                     <%-- (4) 작성 날짜  (형태 변환 과정 1번 거침) --%>
+<<<<<<< HEAD
                                 <c:set var="formattedDate" value="${content.conCreate.format(DateTimeFormatter.ofPattern('yyyy-MM-dd HH:mm:ss'))}" />
+=======
+                                <c:set var="formattedDate" value="${content.conCreate.format(DateTimeFormatter.ofPattern('yyyy-MM-dd HH:mm'))}" />
+>>>>>>> HS
                                 <td class=conCreate>
                                     <c:out value="${formattedDate}" />
                                 </td>
@@ -101,7 +105,11 @@
                             <!-- (3) 작성자 -->
                             <td class=conWriter><c:out value="${content.conWriter}"/></td>
                             <!-- (4) 작성 날짜  (형태 변환 과정 1번 거침) -->
+<<<<<<< HEAD
                             <c:set var="formattedDate" value="${content.conCreate.format(DateTimeFormatter.ofPattern('yyyy-MM-dd HH:mm:ss'))}" />
+=======
+                            <c:set var="formattedDate" value="${content.conCreate.format(DateTimeFormatter.ofPattern('yyyy-MM-dd HH:mm'))}" />
+>>>>>>> HS
                             <td class=conCreate>
                                 <c:out value="${formattedDate}" />
                             </td>
@@ -137,7 +145,11 @@
                                 <c:out value="${content.conWriter}"/></td>
                             </a>
                                 <%-- (4) 작성 날짜  (형태 변환 과정 1번 거침) --%>
+<<<<<<< HEAD
                             <c:set var="formattedDate" value="${content.conCreate.format(DateTimeFormatter.ofPattern('yyyy-MM-dd HH:mm:ss'))}" />
+=======
+                            <c:set var="formattedDate" value="${content.conCreate.format(DateTimeFormatter.ofPattern('yyyy-MM-dd HH:mm'))}" />
+>>>>>>> HS
                             <td class=conCreate>
                                 <c:out value="${formattedDate}" />
                             </td>
@@ -159,10 +171,18 @@
                         <div class="search-wrap">
                             <!-- (1) 제목, 검색 select option-->
                             <select name="searchType" id="search-select"><%-- searchType을 각각 3개로 나누어서 검색 --%>
+<<<<<<< HEAD
                                 <option value="conTitle">제목</option>
                                 <option value="conDetail">내용</option>
                                 <option value="conWriter">작성자</option>
                                 <option value="conTag">태그</option>
+=======
+                                <!-- 0. 검색할때 옵션 선택하면  검색 후에도 옵션값 selected되게 searchType 을 저장시키고 비교해서 selected처리 -->
+                                <option value="conTitle" ${searchType=='conTitle' ? 'selected': ''}>제목</option>
+                                <option value="conDetail" ${searchType=='conDetail' ? 'selected': ''}>내용</option>
+                                <option value="conWriter" ${searchType=='conWriter' ? 'selected': ''}>작성자</option>
+                                <option value="conTag" ${searchType=='conTag' ? 'selected': ''}>태그</option>
+>>>>>>> HS
                             </select>
                             <input name="searchKeyword"   placeholder="검색할 검색어 입력">
                             <!-- (2) 하단 검색 버튼 -->
@@ -190,10 +210,17 @@
                     <c:forEach begin="0" end="${contentPage.totalPages-1}" var="pageNumber">
                         <c:choose>
                             <c:when test="${pageNumber == contentPage.number}">
+<<<<<<< HEAD
                                 <strong>|[${pageNumber+1}]|</strong>
                             </c:when>
                             <c:otherwise>
                                 <a href="<c:url value='/list'><c:param name='page' value='${pageNumber}'/></c:url>">|[${pageNumber+1}]|</a>
+=======
+                                <strong>${pageNumber+1}</strong>
+                            </c:when>
+                            <c:otherwise>
+                                <a href="<c:url value='/list'><c:param name='page' value='${pageNumber}'/></c:url>">${pageNumber+1}</a>
+>>>>>>> HS
                             </c:otherwise>
                         </c:choose>
                     </c:forEach>

@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Mopot">
+    <output-path>$PROJECT_DIR$/out/artifacts/Mopot</output-path>
+    <root id="root" />
+  </artifact>
+</component>

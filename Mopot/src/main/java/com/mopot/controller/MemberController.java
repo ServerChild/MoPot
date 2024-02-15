@@ -1,9 +1,20 @@
 package com.mopot.controller;
 
+<<<<<<< HEAD
 import com.mopot.domain.Member;
 import com.mopot.service.MemberService;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
+=======
+import com.mopot.domain.Content;
+import com.mopot.domain.Member;
+import com.mopot.service.ContentService;
+import com.mopot.service.MemberService;
+import jakarta.servlet.http.HttpSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+>>>>>>> HS
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,6 +29,12 @@ public class MemberController {
     MemberService memberService;
 
     @Autowired
+<<<<<<< HEAD
+=======
+    ContentService contentService;
+
+    @Autowired
+>>>>>>> HS
     PasswordEncoder pEncoder;
 
 	/*
@@ -100,7 +117,11 @@ public class MemberController {
     }
 
     // 마이 페이지 - 회원 정보 조회
+<<<<<<< HEAD
     @GetMapping("/myPageInfo")
+=======
+    @GetMapping("/myPage/myPageInfo")
+>>>>>>> HS
     public String viewMyPage(Member member, Model model) {
         Member loginUser = memberService.loginMember(member);
 
@@ -114,7 +135,11 @@ public class MemberController {
     }
 
     // 마이 페이지 - 회원 정보 수정
+<<<<<<< HEAD
     @PostMapping("/myPageInfo")
+=======
+    @PostMapping("/myPage/myPageInfo")
+>>>>>>> HS
     public String updateMyPage(Member member, Model model) {
         Member loginUser = memberService.loginMember(member);
 
@@ -138,12 +163,34 @@ public class MemberController {
         return memberService.nickCheck(nick);
     }
 
+<<<<<<< HEAD
     // 마이 페이지 - 작성한 글, 댓글 조회
+=======
+    // 마이 페이지 - 비밀번호 변경
+    @RequestMapping("/myPage/rePwdPage")
+    public String rePwdPage() {
+        return "Member/rePwdPage";
+
+
+    }
+
+    // 마이 페이지 - 작성한 글, 신청 조회
+>>>>>>> HS
     @RequestMapping("/conList")
     public String myPageContent() {
         return "Member/conList";
     }
 
+<<<<<<< HEAD
+=======
+    @GetMapping("/myPageConList")
+    public String myPageCreateContent(Pageable pageable, Model model) {
+        Page<Content> contentList = contentService.contentList(pageable);
+
+        return "Member/conList";
+    }
+
+>>>>>>> HS
     // 마이 페이지 - 회원 탈퇴
     @PostMapping("/mDelete")
     @ResponseBody
