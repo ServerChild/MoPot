@@ -45,3 +45,7 @@ j
 :MoPot/src/main/webapp/WEB-INF/views/YS/potWrite copy 3.jsp,d\a\dae75f405e1919490c5dd905196154c19c78355d
 j
 :MoPot/src/main/webapp/WEB-INF/views/YS/potWrite copy 4.jsp,1\2\12be93867c7063336164fa859f91996bc8510631
+c
+3MoPot/src/main/webapp/WEB-INF/views/YS/potWrite.jsp,5\e\5e2e175dab24b79b9d3df1d8996e97f94376db7a
+a
+1MoPot/src/main/webapp/resources/js/comentBytes.js,e\2\e2fd645c58a5f82c2ecbca74eb482b358629a998

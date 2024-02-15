@@ -40,6 +40,11 @@
 	<!-- 헤더 코드 -->
 	<jsp:include page="/WEB-INF/views/common/header.jsp"></jsp:include>
 	<br>
+
+	<!-- 글쓰기 버튼 생성 -->
+	<button type="button" class="btn btn-secondary" onclick="location.href='potWrite'">
+		모집글 작성
+	</button>
 	<!-- 게시글 목록 구성
 			 유저 닉네임
 			 본문 내용, 모집 마감/진헹 정도(커서 올리면 모집 인원 확인 가능, progress 코드 사용), 신청 버튼
@@ -50,7 +55,7 @@
 			<tr>
 				<td></td>
 				<td>
-					프로필 사진, 유저 닉네임
+					유저 닉네임
 					<!-- 히든으로 해도 될 거 같음 아닌가.. 일단 글번호는 히든 -->
 					<!-- 작성일/수정일(수정일은 히든) -->
 				</td>
@@ -70,8 +75,8 @@
 				</td>
 				<td style="width: 2%;">
 					<div class="dropdown">
-							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<i class="bi bi-three-dots-vertical"></i>
+							<button class="bi bi-three-dots-vertical" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<!-- <i class="bi bi-three-dots-vertical"></i> -->
 							</button>
 							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 									<!-- 수정 버튼 -->
